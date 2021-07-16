@@ -28,13 +28,7 @@ class _MyAppState extends State<MyApp> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    SizedBox(
-                      height: 15.89,
-                    ),
                     FirstRow(),
-                    SizedBox(
-                      height: 20,
-                    ),
                     Padding(
                       padding: const EdgeInsets.only(left: 13),
                       child: Text(
@@ -45,24 +39,25 @@ class _MyAppState extends State<MyApp> {
                         ),
                       ),
                     ),
-                    SizedBox(
-                      height: 5,
-                    ),
+                    // SizedBox(
+                    //   height: 5,
+                    // ),
                     SecondRow(),
-                    SizedBox(
-                      height: 5,
-                    ),
+
                     Expanded(
                       child: SingleChildScrollView(
                         child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(
-                                'These jobs are around you',
-                                style: TextStyle(
-                                  fontFamily: 'Lato',
-                                  fontWeight: FontWeight.w500,
-                                  fontSize: 17,
+                              Container(
+                                padding: EdgeInsets.only(left: 10),
+                                child: Text(
+                                  'These jobs are around you',
+                                  style: TextStyle(
+                                    fontFamily: 'Lato',
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 17,
+                                  ),
                                 ),
                               ),
                               Row(
@@ -70,13 +65,16 @@ class _MyAppState extends State<MyApp> {
                                 children: [
                                   TextButton(
                                     onPressed: null,
-                                    child: Text(
-                                      'view All',
-                                      style: TextStyle(
-                                          color: const Color(0xFF983701),
-                                          fontFamily: 'Montserrat-Regular.ttf',
-                                          fontSize: 12,
-                                          fontWeight: FontWeight.w500),
+                                    child: Container(
+                                      child: Text(
+                                        'view All',
+                                        style: TextStyle(
+                                            color: const Color(0xFF983701),
+                                            fontFamily:
+                                                'Montserrat-Regular.ttf',
+                                            fontSize: 12,
+                                            fontWeight: FontWeight.w500),
+                                      ),
                                     ),
                                   ),
                                 ],

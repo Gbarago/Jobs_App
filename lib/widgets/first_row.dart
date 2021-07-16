@@ -5,41 +5,59 @@ class FirstRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Row(
+    return Column(
       children: [
-        SizedBox(
-          width: 29.89,
+        Container(
+          height: MediaQuery.of(context).size.height * 0.0525,
         ),
-        CircleAvatar(
-          backgroundImage: AssetImage('images/Ellipse 9 (1).png'),
-          radius: 21.735,
-          //minRadius: 19.735,
-          backgroundColor: Colors.black12,
-        ),
-        SizedBox(
-          width: 17.64,
-        ),
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        Container(
+            child: Row(
           children: [
-            Text(
-              'Welcome, Chichi',
-              style: TextStyle(
-                  fontFamily: 'montserrat',
-                  fontSize: 18,
-                  fontWeight: FontWeight.w700),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.029,
             ),
-            Text(
-              'what do you need help with today ?',
-              style: TextStyle(
-                fontFamily: 'montserat',
-                fontSize: 12,
-              ),
+            Stack(
+              children: [
+                CircleAvatar(
+                  backgroundColor: Color(0xff983701),
+                  radius: MediaQuery.of(context).size.width * 0.06,
+                ),
+                CircleAvatar(
+                  backgroundImage: AssetImage('images/Ellipse 9 (1).png'),
+                  radius: MediaQuery.of(context).size.width * 0.058,
+                  //minRadius: 19.735,
+                  backgroundColor: Colors.black12,
+                ),
+              ],
+            ),
+            SizedBox(
+              width: 17.64,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Welcome, Chichi',
+                  style: TextStyle(
+                      fontFamily: 'montserrat',
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700),
+                ),
+                Text(
+                  'what do you need help with today ?',
+                  style: TextStyle(
+                    fontFamily: 'montserat',
+                    fontSize: 12,
+                  ),
+                )
+              ],
             )
           ],
-        )
+        )),
+        Container(
+          height: MediaQuery.of(context).size.height * 0.055,
+        ),
       ],
-    ));
+    );
   }
 }
