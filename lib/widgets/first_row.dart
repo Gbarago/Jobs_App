@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+//import '/Screens/mock_screen.dart';
 
 class FirstRow extends StatelessWidget {
   const FirstRow({Key? key}) : super(key: key);
+
+  void gotoMocPage(ctx) {
+    Navigator.of(ctx).pushNamed(
+      '/MocScreen',
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,19 +23,22 @@ class FirstRow extends StatelessWidget {
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.029,
             ),
-            Stack(
-              children: [
-                CircleAvatar(
-                  backgroundColor: Color(0xff983701),
-                  radius: MediaQuery.of(context).size.width * 0.06,
-                ),
-                CircleAvatar(
-                  backgroundImage: AssetImage('images/Ellipse 9 (1).png'),
-                  radius: MediaQuery.of(context).size.width * 0.058,
-                  //minRadius: 19.735,
-                  backgroundColor: Colors.black12,
-                ),
-              ],
+            GestureDetector(
+              onTap: () => gotoMocPage(context),
+              child: Stack(
+                children: [
+                  CircleAvatar(
+                    backgroundColor: Color(0xff983701),
+                    radius: MediaQuery.of(context).size.width * 0.06,
+                  ),
+                  CircleAvatar(
+                    backgroundImage: AssetImage('images/Ellipse 9 (1).png'),
+                    radius: MediaQuery.of(context).size.width * 0.058,
+                    //minRadius: 19.735,
+                    backgroundColor: Colors.black12,
+                  ),
+                ],
+              ),
             ),
             SizedBox(
               width: 17.64,

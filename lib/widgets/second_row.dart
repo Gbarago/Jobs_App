@@ -3,6 +3,12 @@ import 'package:flutter/material.dart';
 class SecondRow extends StatelessWidget {
   const SecondRow({Key? key}) : super(key: key);
 
+  void gotoJobs(ctx) {
+    Navigator.of(ctx).pushNamed(
+      '/MyJobsScren',
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -92,6 +98,7 @@ class SecondRow extends StatelessWidget {
                   height: MediaQuery.of(context).size.height * 0.18,
                   width: MediaQuery.of(context).size.width * 0.299,
                   child: InkWell(
+                    onTap: () => gotoJobs(context),
                     child: Container(
                       child: Stack(
                         children: [
